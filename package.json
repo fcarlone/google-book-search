@@ -11,7 +11,7 @@
   "author": "Frank Carlone",
   "license": "ISC",
   "dependencies": {
-    "axois": "^1.0.0",
+    "axios": "^0.19.0",
     "config": "^3.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.6.1"
