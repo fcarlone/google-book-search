@@ -74,7 +74,8 @@ module.exports = function(app) {
     // Get book id
     try {
       let book = await Book.findById(req.params.id);
-      console.log("book to be deleted", book);
+
+      // Check if book exists
       if (!book) {
         return res.status(404).json({ msg: "Book not found" });
       }
