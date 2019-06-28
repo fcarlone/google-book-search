@@ -16,7 +16,8 @@ app.get("/", (req, res) => {
 });
 
 // Define Routes
-// require("./routes/api/books");
+require("./routes/books")(app);
+// app.use("/api/books", require("./routes/books"));
 
 // Add Listner
 app.listen(PORT, () => {
