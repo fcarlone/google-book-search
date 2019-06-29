@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "../styles/savedItems.css";
 
 const SavedItems = ({ book }) => {
   const { title, authors, description, link, image, _id } = book;
@@ -8,38 +9,39 @@ const SavedItems = ({ book }) => {
     const id = event.target.value;
     console.log("delete button", id);
 
-    // axois call
     axios
-      .delete(`/api/books/${id}`, (req, res) => {
-        console.log("test");
-      })
+      .delete(`/api/books/${id}`, (req, res) => {})
       .then(function(response) {
         console.log(response);
       });
   };
   return (
-    <div>
-      <h1>SavedItem Component</h1>
-      <p>display saved books </p>
-      <p>{title}</p>
-      <p>{authors}</p>
-      <p>{description}</p>
-      <p>{link}</p>
-      <p>{image}</p>
-      <div>
-        <a href={link} target={"_blank"}>
-          View
-        </a>
+    <div className="content-container">
+      <div className="box-1">
+        <p className="title">{title}</p>
+
+        <p className="authors">{authors}</p>
+        <div className="buttons-container">
+          <div>
+            <a href={link} target={"_blank"}>
+              View
+            </a>
+          </div>
+          <div>
+            <button
+              value={_id}
+              onClick={event => {
+                handleDeleteBook(event);
+              }}
+            >
+              Remove{""}
+            </button>
+          </div>
+        </div>
       </div>
-      <div>
-        <button
-          value={_id}
-          onClick={event => {
-            handleDeleteBook(event);
-          }}
-        >
-          Remove{""}
-        </button>
+      <div className="box-2">
+        <img className="image" src={image} alt={title} />
+        <p className="description">{description}</p>
       </div>
     </div>
   );

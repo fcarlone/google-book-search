@@ -4,12 +4,12 @@
 // Connect model
 const Book = require("../models/Book");
 const bookObject = {
-  title: "Test this book",
-  authors: ["Suzanne Collins"],
+  title: "Moby Dick",
+  authors: ["Harold Bloom"],
   description:
-    "Set in a dark vision of the near future, a terrifying reality TV show is taking place.",
+    "This carefully crafted ebook: Moby-Dick (Unabridged) + D. H. Lawrences critique of Moby-Dick is formatted for your eReader with a functional and detailed table of contents. Moby-Dick by Herman Melville: first published in 1851, considered to be one of the Great American Novels and a treasure of world literature, one of the great epics in all of literature. The story tells the adventures of wandering sailor Ishmael, and his voyage on the whaleship Pequod, commanded by Captain Ahab. Ishmael soon learns that Ahab has one purpose on this voyage: to seek out Moby Dick, a ferocious, enigmatic white sperm whale. In a previous encounter, the whale destroyed Ahabs boat and bit off his leg, which now drives Ahab to take revenge... D. H. Lawrences critique of Moby-Dick: Lawrences opinions earned him many enemies and he endured official persecution, censorship, and misrepresentation of his creative work throughout the second half of his life, much of which he spent in a voluntary exile which he called his savage pilgrimage. Lawrence is now valued by many as a visionary thinker and significant representative of modernism in English literature. In his Studies in Classic American Literature, D. H. Lawrence reads Moby Dick as a peculiarly American work. The Pequod, containing many races, many peoples, many nations, under the Stars and Stripes, is the ship of Americas soul; it can be no accident that the ship is governed by a mad captain embarked upon a fanatics hunt. Moby Dick is the deepest blood-being of the white race, hunted by the maniacal fanaticism of our white mental consciousness.",
   image:
-    "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "http://books.google.com/books/content?id=9esSBAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
   link:
     "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
 };
@@ -37,8 +37,8 @@ module.exports = function(app) {
     console.log("req body", req.body);
 
     // console.log("return body - book request body", req.body);
-    // const { title, authors, description, image, link } = bookObject;
-    const { title, authors, description, image, link } = req.body;
+    const { title, authors, description, image, link } = bookObject;
+    // const { title, authors, description, image, link } = req.body;
 
     // Build object to save book
     try {

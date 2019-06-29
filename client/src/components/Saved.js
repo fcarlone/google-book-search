@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import SavedItems from "./SavedItems";
+import "../styles/saved.css";
 
 class Saved extends React.Component {
   constructor(props) {
@@ -25,9 +26,9 @@ class Saved extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
         {this.state.books.map(book => (
-          <SavedItems key={book._id} book={book} />
+          <SavedItems className="saved-container" key={book._id} book={book} />
         ))}
       </div>
     );

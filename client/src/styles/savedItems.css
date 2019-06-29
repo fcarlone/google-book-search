@@ -1,0 +1,31 @@
+.box-1 {
+  display: flex;
+}
+
+.title {
+  flex: 1;
+}
+
+.link {
+  flex: 1;
+}
+
+.authors {
+  flex: 1;
+}
+
+.buttons-container {
+  flex: 1;
+}
+
+.box-2 {
+  display: flex;
+}
+
+.image {
+  width: 150px;
+}
+
+.description {
+  flex: 1;
+}
