@@ -23,13 +23,12 @@ class Saved extends React.Component {
         console.log("updated state", this.state);
       });
   }
-
   render() {
     return (
       <div>
-        <h1>Saved books</h1>
-        <p>display saved books</p>
-        <SavedItems books={this.state} />
+        {this.state.books.map(book => (
+          <SavedItems key={book._id} book={book} />
+        ))}
       </div>
     );
   }
