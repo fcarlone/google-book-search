@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "./components/Search";
+import Saved from "./components/Saved";
 import Books from "./components/Books";
 import axios from "axios";
 import "./App.css";
@@ -33,6 +34,7 @@ class App extends React.Component {
         <h1>App Component</h1>
         <p>Front-end Google Book Search</p>
         <Search searchBooks={this.searchBooks} />
+        <Saved />
         <Books books={this.state.books} />
       </div>
     );
