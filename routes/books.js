@@ -28,19 +28,13 @@ module.exports = function(app) {
       console.error(error.message);
       res.status(500).send("Server Error");
     }
-
-    // const response = await axios.get(
-    //   "https://www.googleapis.com/books/v1/volumes?q=moby%20dick"
-    // );
-
-    // console.log("response:", response);
-    // res.send(response.data.items[0].volumeInfo);
   });
 
   // POST Route - to add new book
   app.post("/api/books", async (req, res) => {
     // Get input data
-    console.log("book request body", req.body);
+
+    // console.log("return body - book request body", req.body);
     // const { title, authors, description, image, link } = bookObject;
     const { title, authors, description, image, link } = req.body;
 

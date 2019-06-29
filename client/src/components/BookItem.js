@@ -1,9 +1,21 @@
 import React from "react";
+import axios from "axios";
 
 const BookItem = ({ book, id }) => {
   // Handle save book
   const handleSaveBook = event => {
-    console.log("handle save book - book ID: ", event.target.value);
+    let bookObject = {
+      title: book.title,
+      authors: book.authors,
+      description: book.description,
+      link: book.previewLink,
+      image: book.imageLinks.smallThumbnail
+    };
+    console.log("handle save book - book ID: ", event.target.value, bookObject);
+    // Save book to MongoDb
+    return axios.post("api/books", bookObject).then(function(response) {
+      console.log(response);
+    });
   };
 
   return (
