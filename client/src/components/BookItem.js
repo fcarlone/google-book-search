@@ -39,7 +39,9 @@ const BookItem = ({ book, id }) => {
         </button>
       </div>
       <div>
-        <a href={book.previewLink}>View</a>
+        <a href={book.previewLink} target={"_blank"}>
+          View
+        </a>
       </div>
     </div>
   );

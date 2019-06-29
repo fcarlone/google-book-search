@@ -12,7 +12,9 @@ const SavedItems = ({ book }) => {
       <p>{link}</p>
       <p>{image}</p>
       <div>
-        <a href={link}>View</a>
+        <a href={link} target={"_blank"}>
+          View
+        </a>
       </div>
       <div>
         <button>Remove</button>
