@@ -11,6 +11,12 @@ const SavedItems = ({ book }) => {
       <p>{description}</p>
       <p>{link}</p>
       <p>{image}</p>
+      <div>
+        <a href={link}>View</a>
+      </div>
+      <div>
+        <button>Remove</button>
+      </div>
     </div>
   );
 };
