@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 // Connect model
-const Book = require("../models/Books");
+const Book = require("../models/Book");
 const bookObject = {
   title: "The Hunger Games",
   authors: ["Suzanne Collins"],
@@ -33,6 +33,7 @@ module.exports = function(app) {
   // POST Route - to add new book
   app.post("/api/books", async (req, res) => {
     // Get input data
+    console.log("req body", req.body);
 
     // console.log("return body - book request body", req.body);
     // const { title, authors, description, image, link } = bookObject;
