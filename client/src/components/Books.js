@@ -5,7 +5,7 @@ const Books = ({ books }) => {
   return (
     <div>
       {books.map(book => (
-        <BookItem key={book.id} book={book.volumeInfo} />
+        <BookItem key={book.id} book={book.volumeInfo} id={book.id} />
       ))}
     </div>
   );
