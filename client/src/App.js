@@ -11,7 +11,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      books: []
+      books: [],
+      search: true
     };
   }
 
@@ -32,9 +33,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar search={this.props} />
+        <h1>App Component Intro</h1>
+
         <Search searchBooks={this.searchBooks} />
         <Saved />
+
         <Books books={this.state.books} />
       </div>
     );
