@@ -1,10 +1,21 @@
 import React from "react";
+import axios from "axios";
 
 const SavedItems = ({ book }) => {
   const { title, authors, description, link, image, _id } = book;
 
   const handleDeleteBook = event => {
-    console.log("delete button", event.target.value);
+    const id = event.target.value;
+    console.log("delete button", id);
+
+    // axois call
+    axios
+      .delete(`/api/books/${id}`, (req, res) => {
+        console.log("test");
+      })
+      .then(function(response) {
+        console.log(response);
+      });
   };
   return (
     <div>
