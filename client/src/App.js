@@ -12,7 +12,7 @@ class App extends React.Component {
 
     this.state = {
       books: [],
-      search: true
+      search: false
     };
   }
 
@@ -27,10 +27,11 @@ class App extends React.Component {
     console.log(response.data.items);
 
     // setState to books array
-    this.setState({ books: response.data.items });
+    this.setState({ books: response.data.items, search: true });
   };
 
   render() {
+    console.log("Search State", this.state.search);
     return (
       <div className="App">
         <NavBar search={this.props} />
@@ -44,9 +45,7 @@ class App extends React.Component {
           </p>
         </div>
         <Search searchBooks={this.searchBooks} />
-        <Saved />
-
-        <Books books={this.state.books} />
+        {this.state.search ? <Books books={this.state.books} /> : <Saved />}
       </div>
     );
   }

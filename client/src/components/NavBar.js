@@ -11,15 +11,15 @@ class NavBar extends React.Component {
       search: true
     };
   }
-  handleSearchChange = () => {
-    console.log("change boolen");
-    this.setState({ search: true });
-  };
+  // handleSearchChange = () => {
+  //   console.log("change boolen");
+  //   this.setState({ search: true });
+  // };
 
-  handleSavedChange = () => {
-    console.log("change boolen");
-    this.setState({ search: false });
-  };
+  // handleSavedChange = () => {
+  //   console.log("change boolen");
+  //   this.setState({ search: false });
+  // };
   render() {
     return (
       <Navbar bg="primary" variant="dark" sticky="top">
