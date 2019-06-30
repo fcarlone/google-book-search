@@ -8,18 +8,20 @@ class NavBar extends React.Component {
     super(props);
 
     this.state = {
-      search: true
+      search: false
     };
   }
-  // handleSearchChange = () => {
-  //   console.log("change boolen");
-  //   this.setState({ search: true });
-  // };
+  handleSearchChange = () => {
+    console.log("search change");
+    this.props.handleSearchValue(true);
+    this.setState({ search: true });
+  };
 
-  // handleSavedChange = () => {
-  //   console.log("change boolen");
-  //   this.setState({ search: false });
-  // };
+  handleSavedChange = () => {
+    console.log("saved change ");
+    this.props.handleSearchValue(false);
+    this.setState({ search: false });
+  };
   render() {
     return (
       <Navbar bg="primary" variant="dark" sticky="top">

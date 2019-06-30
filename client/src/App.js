@@ -30,11 +30,17 @@ class App extends React.Component {
     this.setState({ books: response.data.items, search: true });
   };
 
+  // Get search value from Navbar links
+  handleSearchValue = data => {
+    console.log("data from App", data);
+    this.setState({ search: data });
+  };
+
   render() {
     console.log("Search State", this.state.search);
     return (
       <div className="App">
-        <NavBar search={this.props} />
+        <NavBar handleSearchValue={this.handleSearchValue} />
         <div className="intro">
           <p className="header-title">Google Books Search</p>
           <p className="header-description">
