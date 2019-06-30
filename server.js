@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const connectDB = require("./config/db");
 
 const app = express();
@@ -9,15 +10,20 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Add Middleware
-
-// Routes
-app.get("/", (req, res) => {
-  res.send("Welcome to landing page");
-});
+app.use(express.json({ extended: false }));
 
 // Define Routes
 require("./routes/books")(app);
-// app.use("/api/books", require("./routes/books"));
+
+// Serve up static assets
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+// Route to load single HTML page
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // Add Listner
 app.listen(PORT, () => {
