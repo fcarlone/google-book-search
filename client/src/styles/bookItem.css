@@ -1,0 +1,65 @@
+.box-1 {
+  display: flex;
+  padding-top: 0.5rem;
+}
+
+.title {
+  flex: 1;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-top: 0.5rem;
+}
+
+.link {
+  flex: 1;
+}
+
+.authors {
+  flex: 1;
+  padding-left: 15rem;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-top: 0.5rem;
+}
+
+.buttons-container {
+  flex: 1;
+}
+
+.box-2 {
+  display: flex;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.image {
+  width: 150px;
+}
+
+.description {
+  flex: 1;
+  font-family: "Heebo", sans-serif;
+  padding-left: 1.5rem;
+  text-align: justify;
+}
+
+.buttons-container {
+  display: flex;
+  padding-left: 15rem;
+}
+
+.btn-view {
+  margin-right: 1rem;
+  width: 6rem;
+}
+.btn-save {
+  width: 6rem;
+  height: 38px;
+}
+
+/* font-family: 'Heebo', sans-serif;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Noto Sans HK', sans-serif; */
