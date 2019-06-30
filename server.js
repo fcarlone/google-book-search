@@ -10,15 +10,15 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Add Middleware
-app.use(express.json({ extended: false }));
-
-// Define Routes
-require("./routes/books")(app);
+app.use(express.json({ extended: true }));
 
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+// Define Routes
+require("./routes/books")(app);
 
 // Route to load single HTML page
 app.get("*", (req, res) => {
