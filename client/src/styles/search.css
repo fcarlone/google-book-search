@@ -1,0 +1,11 @@
+.search-container {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.btn-search {
+  margin-top: 0.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}

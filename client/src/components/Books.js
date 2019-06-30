@@ -6,7 +6,7 @@ const Books = ({ books }) => {
   return (
     <div className="container">
       <div className="category-container">
-        <h3>Searched Books</h3>
+        <h3>Search Results</h3>
         <div>
           {books.map(book => (
             <BookItem
