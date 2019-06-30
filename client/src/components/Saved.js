@@ -27,9 +27,16 @@ class Saved extends React.Component {
   render() {
     return (
       <div className="container">
-        {this.state.books.map(book => (
-          <SavedItems className="saved-container" key={book._id} book={book} />
-        ))}
+        <div className="category-container">
+          <h3>Saved Books</h3>
+          {this.state.books.map(book => (
+            <SavedItems
+              className="saved-container"
+              key={book._id}
+              book={book}
+            />
+          ))}
+        </div>
       </div>
     );
   }

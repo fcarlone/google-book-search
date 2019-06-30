@@ -1,6 +1,17 @@
 .container {
   display: inline;
 }
-/* .content-container {
-  width: 100%;
-} */
+h3 {
+  padding-top: 0.5rem;
+  margin: 0;
+}
+
+.category-container {
+  border: rgb(177, 175, 175) 1rem solid;
+}
+.content-container {
+  border: 3px black solid;
+  padding: 0.5rem;
+  margin: 1rem;
+  padding-bottom: 12px;
+}

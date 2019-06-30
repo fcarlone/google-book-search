@@ -23,12 +23,17 @@ const SavedItems = ({ book }) => {
         <p className="authors">{authors}</p>
         <div className="buttons-container">
           <div>
-            <a href={link} target={"_blank"}>
-              View
+            <a
+              className="btn btn-view btn-primary"
+              href={link}
+              target={"_blank"}
+            >
+              View{" "}
             </a>
           </div>
           <div>
             <button
+              className="btn btn-remove btn-info"
               value={_id}
               onClick={event => {
                 handleDeleteBook(event);
