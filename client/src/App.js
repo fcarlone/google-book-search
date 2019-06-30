@@ -34,8 +34,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar search={this.props} />
-        <h1>App Component Intro</h1>
-
+        <div className="intro">
+          <p className="header-title">Google Books Search</p>
+          <p className="header-description">
+            Perform full-text searches and retrieve book{" "}
+          </p>
+          <p className="header-description">
+            information using Google’s Book API
+          </p>
+        </div>
         <Search searchBooks={this.searchBooks} />
         <Saved />
 
