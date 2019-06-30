@@ -33,7 +33,7 @@ const SavedItems = ({ book }) => {
           </div>
           <div>
             <button
-              className="btn btn-remove btn-info"
+              className="btn btn-remove btn-danger"
               value={_id}
               onClick={event => {
                 handleDeleteBook(event);
