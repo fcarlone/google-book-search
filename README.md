@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Google Books Search API- MERN Stack
 
-## Available Scripts
+## Full-stack (MERN) application that gives the user access to Google's Books API and the ability to save a book for future reference.
 
-In the project directory, you can run:
+### About the Application:
 
-### `npm start`
+This application was built was Express and Node on the back-end and React on the front-end. Book data is stored using MongoDB Atlas.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Application Instructions:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Enter a book related search term (i.e. book title or author) in the search field. Google's Books API will return a list of books based on your search. You can view additional information about the book at Google Books site and the ability to save the book to reference later.
 
-### `npm test`
+### Software/libraries used for this application:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Node.js - used for developing the server-side of the application  
+Express.js - used for building the web application and handle HTTP requests  
+MongoDB Atlas- fully automated cloud platform for storing and managing the application’s data  
+JavaScript - for the applications logic  
+Bootstrap - front-end framework used to create modern websites and making the application responsive
 
-### `npm run build`
+### Heroku Deployment:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application is deployed using the Heroku cloud platform. You can visit the site at:  
+[https://fcarlone-book-search.herokuapp.com/](https://fcarlone-book-search.herokuapp.com/)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Video Demo:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[![Watch the video](src/assets/images/screenshot.png)](https://drive.google.com/file/d/10Y_YT6KJa37vB4l9snWnBGLnmkABIIEv/view)
