@@ -25,4 +25,4 @@ The application is deployed using the Heroku cloud platform. You can visit the s
 
 ### Video Demo:
 
-[![Watch the video](src/assets/images/screenshot.png)](https://drive.google.com/file/d/10Y_YT6KJa37vB4l9snWnBGLnmkABIIEv/view)
+[![Watch the video](public/assets/screenshot.png)](https://drive.google.com/file/d/10Y_YT6KJa37vB4l9snWnBGLnmkABIIEv/view)
