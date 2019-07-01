@@ -20,7 +20,7 @@ module.exports = function(app) {
   app.get("/api/books", async (req, res) => {
     try {
       const books = await Book.find({}).sort({
-        title: -1
+        title: 1
       });
       res.json(books);
 
@@ -36,18 +36,16 @@ module.exports = function(app) {
     // Get input data
     console.log("req body - post route", req.body);
 
-    // console.log("return body - book request body", req.body);
-    // const { title, authors, description, image, link } = bookObject;
-    // const { title, authors, description, image, link } = req.body;
+    const { title, authors, description, image, link } = req.body;
 
     // Build object to save book
     try {
       const newBook = new Book({
-        title: req.body.title,
-        authors: req.body.authors,
-        description: req.body.description,
-        image: req.body.image,
-        link: req.body.link
+        title: title,
+        authors: authors,
+        description: description,
+        image: image,
+        link: link
       });
 
       console.log("new book object", newBook);
