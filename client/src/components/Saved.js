@@ -15,20 +15,19 @@ class Saved extends React.Component {
   // Display saved books
   componentDidMount() {
     console.log("Saved Component componentDidMount");
-    axios
-      .get("/api/books", (req, res) => {})
-      .then(response => {
-        this.setState({
-          books: response.data
-        });
-        console.log("updated state", this.state);
+    axios.get("/api/books").then(response => {
+      this.setState({
+        books: response.data
       });
+      console.log("updated state", this.state);
+    });
   }
   render() {
     return (
       <div className="container">
         <div className="category-container">
           <h3>Saved Books</h3>
+          <h6>sorted by title</h6>
           {this.state.books.map(book => (
             <SavedItems
               className="saved-container"
