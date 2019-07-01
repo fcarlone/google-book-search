@@ -34,20 +34,20 @@ module.exports = function(app) {
   // POST Route - to add new book
   app.post("/api/books", async (req, res) => {
     // Get input data
-    console.log("req body", req.body);
+    console.log("req body - post route", req.body);
 
     // console.log("return body - book request body", req.body);
-    const { title, authors, description, image, link } = bookObject;
+    // const { title, authors, description, image, link } = bookObject;
     // const { title, authors, description, image, link } = req.body;
 
     // Build object to save book
     try {
       const newBook = new Book({
-        title,
-        authors,
-        description,
-        image,
-        link
+        title: req.body.title,
+        authors: req.body.authors,
+        description: req.body.description,
+        image: req.body.image,
+        link: req.body.link
       });
 
       console.log("new book object", newBook);
