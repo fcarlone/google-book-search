@@ -26,7 +26,7 @@ class NavBar extends React.Component {
     return (
       <Navbar bg="primary" variant="dark" sticky="top">
         <i className="fas fa-book" />
-        <Navbar.Brand> Google Book API</Navbar.Brand>
+        <Navbar.Brand> Google Books API</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#search" onClick={this.handleSearchChange}>
             Search

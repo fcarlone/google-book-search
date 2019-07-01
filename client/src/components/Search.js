@@ -38,7 +38,7 @@ class Search extends React.Component {
             style={{ width: "50rem" }}
             type="text"
             name="text"
-            placeholder="Enter Book Title..."
+            placeholder="Search Here..."
             value={this.state.text}
             onChange={this.onChange}
           />
