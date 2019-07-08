@@ -18,6 +18,10 @@ MongoDB Atlas- fully automated cloud platform for storing and managing the appli
 JavaScript - for the applications logic  
 Bootstrap - front-end framework used to create modern websites and making the application responsive
 
+### Cloning this Repository:
+
+If you are planning to clone this repository, follow the instructions in the .env.instructions file.
+
 ### Heroku Deployment:
 
 The application is deployed using the Heroku cloud platform. You can visit the site at:  
