@@ -15,7 +15,7 @@ Enter a book related search term (i.e. book title or author) in the search field
 Node.js - used for developing the server-side of the application  
 Express.js - used for building the web application and handle HTTP requests  
 MongoDB Atlas- fully automated cloud platform for storing and managing the application’s data  
-JavaScript - for the applications logic  
+JavaScript - for application logic  
 Bootstrap - front-end framework used to create modern websites and making the application responsive
 
 ### Cloning this Repository:
