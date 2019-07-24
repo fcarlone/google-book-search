@@ -47,11 +47,18 @@ const BookItem = ({ book, id }) => {
         </div>
       </div>
       <div className="box-2">
-        <img
-          className="image"
-          src={book.imageLinks.smallThumbnail}
-          alt={book.title}
-        />
+        {book.imageLinks ? (
+          <img
+            className="image"
+            src={book.imageLinks.smallThumbnail}
+            alt={book.title}
+          />
+        ) : (
+          <div>
+            <p style={{ fontWeight: "bold" }}>Book image</p>
+            <p style={{ fontWeight: "bold" }}>not available</p>
+          </div>
+        )}
         <p className="description">{book.description}</p>
       </div>
     </div>
