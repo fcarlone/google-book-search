@@ -22,6 +22,13 @@ class Saved extends React.Component {
       console.log("updated state", this.state);
     });
   }
+
+  // Handle remove saved book
+  handleRemoveSavedBook = id => {
+    console.log("test");
+    console.log("handle remove saved book", id);
+  };
+
   render() {
     return (
       <div className="container">
@@ -33,6 +40,7 @@ class Saved extends React.Component {
               className="saved-container"
               key={book._id}
               book={book}
+              handleRemoveSavedBook={() => this.handleRemoveSavedBook(book._id)}
             />
           ))}
         </div>

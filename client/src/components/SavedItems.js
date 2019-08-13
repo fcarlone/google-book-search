@@ -1,20 +1,21 @@
 import React from "react";
-import axios from "axios";
+// import axios from "axios";
 import "../styles/savedItems.css";
 
-const SavedItems = ({ book }) => {
-  const { title, authors, description, link, image, _id } = book;
+const SavedItems = props => {
+  const { title, authors, description, link, image, _id } = props.book;
 
-  const handleDeleteBook = event => {
-    const id = event.target.value;
-    console.log("delete button", id);
+  // const handleDeleteBook = event => {
+  //   const id = event.target.value;
+  //   console.log("delete button", id);
 
-    axios
-      .delete(`/api/books/${id}`, (req, res) => {})
-      .then(function(response) {
-        console.log(response);
-      });
-  };
+  //   axios
+  //     .delete(`/api/books/${id}`, (req, res) => {})
+  //     .then(function(response) {
+  //       console.log(response);
+  //     });
+  // };
+
   return (
     <div className="content-container">
       <div className="box-1">
@@ -35,9 +36,7 @@ const SavedItems = ({ book }) => {
             <button
               className="btn btn-remove btn-danger"
               value={_id}
-              onClick={event => {
-                handleDeleteBook(event);
-              }}
+              onClick={props.handleRemoveSavedBook}
             >
               Remove{""}
             </button>
