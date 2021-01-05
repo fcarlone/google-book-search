@@ -14,7 +14,7 @@
   "author": "Frank Carlone",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "config": "^3.1.0",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
